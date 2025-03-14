@@ -31,6 +31,11 @@ td {
     border-spacing: 0;
 }
 
+td.banner {
+    height: 1081px;
+    width: 1266px;
+}
+
 img {
     display: block;
     padding: 0;
