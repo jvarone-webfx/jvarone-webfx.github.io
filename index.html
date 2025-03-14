@@ -1,9 +1,28 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>My First HTML Page</title>
+        <title>Neverending Journey</title>
     </head>
     <body>
-        <h1>Welcome to My First HTML Page</h1>
-        <p>This is a simple HTML page.</p>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </body>
 </html>
+
+<script type="text/javascript">
+    // On scroll, add a table row
+    window.addEventListener('scroll', function() {
+        const table = document.querySelector('table');
+        const row = document.createElement('tr');
+        row.innerHTML = '<td></td><td></td><td></td><td></td><td></td><td></td><td></td>';
+        table.appendChild(row);
+    });
+</script>
