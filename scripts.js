@@ -22,12 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 rowCount % 2 === 0 ? "Image_Left-1.png" : "Image_Left-2.png",
             ];
             for (let i = 0; i < NUM_IMAGES_PER_ROW - 2; i++) {
-                if (randomNumber > 0) {
+                if (randomNumber > 20) {
                     images.push(`Image_R-${Math.floor(Math.random() * 8) + 1}.png`);
-                } else {
+                } else if (randomNumber > 10) {
                     // Generate a random number between 9 and 12
                     const randomNumber2 = Math.floor(Math.random() * 4) + 9;
                     images.push(`Image_R-${randomNumber2}.png`);
+                } else if (randomNumber > 5) {
+                    // Generate a random number between 13 and 15
+                    const randomNumber3 = Math.floor(Math.random() * 3) + 13;
+                    images.push(`Image_R-${randomNumber3}.png`);
+                } else {
+                    images.push(`Image_R-16.png`);
                 }
             }
             images.push(

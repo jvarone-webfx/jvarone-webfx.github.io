@@ -2,7 +2,7 @@ body {
     height: 200vh;
     margin: 0;
     padding: 0;
-    background-color: lightgreen;
+    background-color: lightblue;
 }
 
 table {
@@ -24,7 +24,7 @@ td {
     height: 211px;
     width: 211px;
     text-align: center;
-    background-color: lightgreen;
+    background-color: lightblue;
     padding: 0;
     margin: 0;
     border-width: 0;
