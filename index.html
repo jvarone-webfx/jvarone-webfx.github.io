@@ -20,12 +20,14 @@
 <script type="text/javascript">
     // On scroll, add a table row - after document is ready
     // Only add a row after scrolling in increments of 200px
+    let furthestScroll = 0;
     let scrollPosition = 0;
     let rowNumbers = [7, 8, 9, 10, 11, 12];
     document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
             scrollPosition = window.scrollY;
-            if (scrollPosition % 200 === 0) {
+            if (scrollPosition - furthestScroll >= 200) {
+                furthestScroll = scrollPosition;
                 console.log(rowNumbers, scrollPosition);
                 console.log('scroll');
                 const table = document.querySelector('table');
