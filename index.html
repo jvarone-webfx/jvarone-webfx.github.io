@@ -54,8 +54,8 @@
     window.addEventListener("scroll", function () {
       scrollPosition = window.scrollY;
       if (scrollPosition - furthestScroll >= 211) {
-        furthestScroll = scrollPosition;
         let numberOfRows = (scrollPosition - furthestScroll) / 211;
+        furthestScroll = scrollPosition;
         for (let i = 0; i < numberOfRows; i++) {
             console.log("scroll");
             const table = document.querySelector("table");
