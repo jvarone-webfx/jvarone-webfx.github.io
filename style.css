@@ -7,8 +7,16 @@ body {
 table {
     width: 1266px;
     margin: 0 auto;
-    border-spacing: 0;
     padding: 0;
+    border-width: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr {
+    border-width: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 td {
@@ -16,4 +24,15 @@ td {
     width: 211px;
     text-align: center;
     background-color: lightgreen;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    display: block;
+    padding: 0;
+    margin: 0;
 }
