@@ -13,13 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         furthestScroll = scrollPosition;
         let lastRandomNumber = 1;
         for (let i = 0; i < numberOfRows; i++) {
-            // Generate a random number between 1 and 100
-            const randomNumber = Math.floor(Math.random() * 100) + 1;
-            while (randomNumber === lastRandomNumber) {
-                randomNumber = Math.floor(Math.random() * 100) + 1;
-            }
-            lastRandomNumber = randomNumber;
-            console.log("scroll", randomNumber);
+            console.log("scroll");
             const table = document.querySelector("table");
             const row = document.createElement("tr");
 
@@ -29,6 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
             let lastRandomNumber2 = 1;
             let imagesInRow = [];
             for (let i = 0; i < NUM_IMAGES_PER_ROW - 2; i++) {
+                // Generate a random number between 1 and 100
+                const randomNumber = Math.floor(Math.random() * 100) + 1;
+                while (randomNumber === lastRandomNumber) {
+                    randomNumber = Math.floor(Math.random() * 100) + 1;
+                }
+                lastRandomNumber = randomNumber;
                 if (randomNumber > 20) {
                     let randomNumber2 = Math.floor(Math.random() * 8) + 1;
                     while (randomNumber2 === lastRandomNumber2 || imagesInRow.includes(randomNumber2)) {
