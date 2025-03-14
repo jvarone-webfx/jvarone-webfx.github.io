@@ -19,13 +19,26 @@
 
 <script type="text/javascript">
     // On scroll, add a table row - after document is ready
+    // Only add a row after scrolling 100px
+    let scrollPosition = 0;
+    let rowNumbers = [7, 8, 9, 10, 11, 12];
     document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
-            console.log('scroll');
-            const table = document.querySelector('table');
-            const row = document.createElement('tr');
-            row.innerHTML = '<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>';
-            table.appendChild(row);
+            scrollPosition = window.scrollY;
+            if (scrollPosition > 100) {
+                console.log('scroll');
+                const table = document.querySelector('table');
+                const row = document.createElement('tr');
+                row.innerHTML = '<td>' + rowNumbers.shift() + '</td><td>' + rowNumbers.shift() + '</td><td>' + rowNumbers.shift() + '</td><td>' + rowNumbers.shift() + '</td><td>' + rowNumbers.shift() + '</td><td>' + rowNumbers.shift() + '</td>';
+                table.appendChild(row);
+                rowNumbers.push(rowNumbers.shift());
+                rowNumbers.push(rowNumbers.shift());
+                rowNumbers.push(rowNumbers.shift());
+                rowNumbers.push(rowNumbers.shift());
+                rowNumbers.push(rowNumbers.shift());
+                rowNumbers.push(rowNumbers.shift());
+                
+            }
         });
     });
 </script>
