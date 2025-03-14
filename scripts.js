@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ];
             for (let i = 0; i < NUM_IMAGES_PER_ROW - 2; i++) {
                 if (randomNumber > 0) {
-                    images.push(`Image_R-${randomNumber}.png`);
+                    images.push(`Image_R-${Math.floor(Math.random() * 8) + 1}.png`);
                 } else {
                     // Generate a random number between 9 and 12
                     const randomNumber2 = Math.floor(Math.random() * 4) + 9;
