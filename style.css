@@ -1,5 +1,9 @@
+body {
+    height: 200vh;
+}
+
 table {
-    width: 600px;
+    width: 1200px;
     margin: 0 auto;
     border-spacing: 0;
     padding: 0;
@@ -7,6 +11,6 @@ table {
 }
 
 td {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
 }
