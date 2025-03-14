@@ -51,17 +51,20 @@
     document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
             scrollPosition = window.scrollY;
-            if (scrollPosition - furthestScroll >= 200) {
+            if (scrollPosition - furthestScroll >= 211) {
+                let numberOfRows = (scrollPosition - furthestScroll) / 211;
                 furthestScroll = scrollPosition;
-                console.log(rowNumbers, scrollPosition);
-                console.log('scroll');
-                const table = document.querySelector('table');
-                const row = document.createElement('tr');
-                
-                row.innerHTML = '<td>' + rowNumbers[0] + '</td><td>' + rowNumbers[1] + '</td><td>' + rowNumbers[2] + '</td><td>' + rowNumbers[3] + '</td><td>' + rowNumbers[4] + '</td><td>' + rowNumbers[5] + '</td>';
-                table.appendChild(row);
-                // Set rowNumbers to the next 6 numbers
-                rowNumbers = [rowNumbers[0] + 6, rowNumbers[1] + 6, rowNumbers[2] + 6, rowNumbers[3] + 6, rowNumbers[4] + 6, rowNumbers[5] + 6];
+                for (let i = 0; i < numberOfRows; i++) {
+                    console.log(rowNumbers, scrollPosition);
+                    console.log('scroll');
+                    const table = document.querySelector('table');
+                    const row = document.createElement('tr');
+                    
+                    row.innerHTML = '<td>' + rowNumbers[0] + '</td><td>' + rowNumbers[1] + '</td><td>' + rowNumbers[2] + '</td><td>' + rowNumbers[3] + '</td><td>' + rowNumbers[4] + '</td><td>' + rowNumbers[5] + '</td>';
+                    table.appendChild(row);
+                    // Set rowNumbers to the next 6 numbers
+                    rowNumbers = [rowNumbers[0] + 6, rowNumbers[1] + 6, rowNumbers[2] + 6, rowNumbers[3] + 6, rowNumbers[4] + 6, rowNumbers[5] + 6];
+                }
             }
         });
     });

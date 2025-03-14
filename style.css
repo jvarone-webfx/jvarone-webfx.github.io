@@ -1,17 +1,19 @@
 body {
     height: 10000vh;
+    margin: 0;
+    padding: 0;
 }
 
 table {
-    width: 1200px;
+    width: 1266px;
     margin: 0 auto;
     border-spacing: 0;
     padding: 0;
 }
 
 td {
-    height: 200px;
-    width: 200px;
+    height: 211px;
+    width: 211px;
     text-align: center;
     background-color: lightgreen;
 }
